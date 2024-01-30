@@ -8,7 +8,7 @@ class RedisBroker(Broker):
         self.redis = Redis()
         self.timeout = max(timeout,1) # min is 1 because broker does not support indefinite waits
         
-        # Broker only supports one queue + corresponding logging queue to log all transactions and dlq
+        # Broker only supports one queue per broker  + corresponding logging queue to log all transactions and dlq
         self.key = queue_id
         self.logging_key = queue_id + '_logging_queue'
         self.dlq_key = queue_id + '_DLQ'
