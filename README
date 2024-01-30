@@ -1,4 +1,0 @@
-# Concurrent task queue
-
-Implementation of a concurrent task queue with Redis as a broker
-
